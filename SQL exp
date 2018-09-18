@@ -1,0 +1,5 @@
+- Sử dụng SQL với truy vấn cùng 2 bảng 1 lúc, nếu 2 bảng có ít nhất 1 cặp col trùng nhau, phải gọi đích thân col đó là của bảng nào.
+Ex: $sql = "SELECT * FROM `hotel_order` od INNER JOIN `". DB_PREFIX ."hotel_order_detail` dt ON od.id = dt.hotel_order_id WHERE " ;
++(1):$sql .= " AND od.hotel_name  = 'khachsan5sao'";
++(2):$sql .= " AND hotel_name  = 'khachsan5sao'";
+( Nếu  )
